@@ -1,0 +1,2050 @@
+{
+  "contractName": "VehicleTracking",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "vehicleDataRecords",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "frame",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "classType",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "classId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "trackerId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_frame",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "_classType",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_classId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_trackerId",
+          "type": "uint256"
+        }
+      ],
+      "name": "addVehicleData",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "index",
+          "type": "uint256"
+        }
+      ],
+      "name": "getVehicleData",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_frame\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"_classType\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"_classId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_trackerId\",\"type\":\"uint256\"}],\"name\":\"addVehicleData\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"}],\"name\":\"getVehicleData\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"vehicleDataRecords\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"frame\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"classType\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"classId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"trackerId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/VehicleTracking.sol\":\"VehicleTracking\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/VehicleTracking.sol\":{\"keccak256\":\"0x05353f69afd968079ac8372b498df16a492e2ea02d9d8c09af23d5465b3ae930\",\"urls\":[\"bzz-raw://9e350dd78b005cbf18e8604e6209315392749ae731201142645689cb9c6502bd\",\"dweb:/ipfs/QmdWVyogkc5dSaA8jE3XW25doL2dzExMhLfkMUjm24HVC8\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061062a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80638ef93e86146100465780639117dd3714610102578063c8920eb1146101db575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610297565b6040518085815260200180602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156100c45780820151818401526020810190506100a9565b50505050905090810190601f1680156100f15780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b6101d96004803603608081101561011857600080fd5b81019080803590602001909291908035906020019064010000000081111561013f57600080fd5b82018360208201111561015157600080fd5b8035906020019184600183028401116401000000008311171561017357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001909291908035906020019092919050505061036c565b005b610207600480360360208110156101f157600080fd5b810190808035906020019092919050505061040a565b6040518085815260200180602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b8381101561025957808201518184015260208101905061023e565b50505050905090810190601f1680156102865780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b600081815481106102a457fe5b9060005260206000209060040201600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103565780601f1061032b57610100808354040283529160200191610356565b820191906000526020600020905b81548152906001019060200180831161033957829003601f168201915b5050505050908060020154908060030154905084565b610374610528565b6040518060800160405280868152602001858152602001848152602001838152509050600081908060018154018082558091505090600182039060005260206000209060040201600090919290919091506000820151816000015560208201518160010190805190602001906103eb929190610550565b5060408201518160020155606082015181600301555050505050505050565b60006060600080610419610528565b6000868154811061042657fe5b906000526020600020906004020160405180608001604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104e25780601f106104b7576101008083540402835291602001916104e2565b820191906000526020600020905b8154815290600101906020018083116104c557829003601f168201915b5050505050815260200160028201548152602001600382015481525050905080600001518160200151826040015183606001518292509450945094509450509193509193565b6040518060800160405280600081526020016060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061059157805160ff19168380011785556105bf565b828001600101855582156105bf579182015b828111156105be5782518255916020019190600101906105a3565b5b5090506105cc91906105d0565b5090565b6105f291905b808211156105ee5760008160009055506001016105d6565b5090565b9056fea265627a7a7231582055dcbdb18ae96736ece3ad558b9d6ae7ca8cbe22e66076498902a9c0d6be73c664736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80638ef93e86146100465780639117dd3714610102578063c8920eb1146101db575b600080fd5b6100726004803603602081101561005c57600080fd5b8101908080359060200190929190505050610297565b6040518085815260200180602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b838110156100c45780820151818401526020810190506100a9565b50505050905090810190601f1680156100f15780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b6101d96004803603608081101561011857600080fd5b81019080803590602001909291908035906020019064010000000081111561013f57600080fd5b82018360208201111561015157600080fd5b8035906020019184600183028401116401000000008311171561017357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f820116905080830192505050505050509192919290803590602001909291908035906020019092919050505061036c565b005b610207600480360360208110156101f157600080fd5b810190808035906020019092919050505061040a565b6040518085815260200180602001848152602001838152602001828103825285818151815260200191508051906020019080838360005b8381101561025957808201518184015260208101905061023e565b50505050905090810190601f1680156102865780820380516001836020036101000a031916815260200191505b509550505050505060405180910390f35b600081815481106102a457fe5b9060005260206000209060040201600091509050806000015490806001018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103565780601f1061032b57610100808354040283529160200191610356565b820191906000526020600020905b81548152906001019060200180831161033957829003601f168201915b5050505050908060020154908060030154905084565b610374610528565b6040518060800160405280868152602001858152602001848152602001838152509050600081908060018154018082558091505090600182039060005260206000209060040201600090919290919091506000820151816000015560208201518160010190805190602001906103eb929190610550565b5060408201518160020155606082015181600301555050505050505050565b60006060600080610419610528565b6000868154811061042657fe5b906000526020600020906004020160405180608001604052908160008201548152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104e25780601f106104b7576101008083540402835291602001916104e2565b820191906000526020600020905b8154815290600101906020018083116104c557829003601f168201915b5050505050815260200160028201548152602001600382015481525050905080600001518160200151826040015183606001518292509450945094509450509193509193565b6040518060800160405280600081526020016060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061059157805160ff19168380011785556105bf565b828001600101855582156105bf579182015b828111156105be5782518255916020019190600101906105a3565b5b5090506105cc91906105d0565b5090565b6105f291905b808211156105ee5760008160009055506001016105d6565b5090565b9056fea265627a7a7231582055dcbdb18ae96736ece3ad558b9d6ae7ca8cbe22e66076498902a9c0d6be73c664736f6c63430005100032",
+  "sourceMap": "26:814:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:814:1;;;;;;;",
+  "deployedSourceMap": "26:814:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:814:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;190:39;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;190:39:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;190:39:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;236:351;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;236:351:1;;;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;236:351:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;236:351:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;236:351:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;236:351:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;593:245;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;593:245:1;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;593:245:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;190:39;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;236:351::-;357:26;;:::i;:::-;386:151;;;;;;;;419:6;386:151;;;;450:10;386:151;;;;483:8;386:151;;;;516:10;386:151;;;357:180;;548:18;572:7;548:32;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;548:32:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;236:351;;;;;:::o;593:245::-;653:7;662:13;677:7;686;705:23;;:::i;:::-;731:18;750:5;731:25;;;;;;;;;;;;;;;;;;705:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;774:4;:10;;;786:4;:14;;;802:4;:12;;;816:4;:14;;;766:65;;;;;;;;;;;;593:245;;;;;:::o;26:814::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.16;\n\ncontract VehicleTracking {\n    struct VehicleData {\n        uint256 frame;\n        string classType;\n        uint256 classId;\n        uint256 trackerId;\n    }\n\n    VehicleData[] public vehicleDataRecords;\n\n    function addVehicleData(uint256 _frame, string memory _classType, uint256 _classId, uint256 _trackerId) public {\n        VehicleData memory newData = VehicleData({\n            frame: _frame,\n            classType: _classType,\n            classId: _classId,\n            trackerId: _trackerId\n        });\n\n        vehicleDataRecords.push(newData);\n    }\n\n    function getVehicleData(uint256 index) public view returns (uint256, string memory, uint256, uint256) {\n        VehicleData memory data = vehicleDataRecords[index];\n        return (data.frame, data.classType, data.classId, data.trackerId);\n    }\n}\n",
+  "sourcePath": "C:\\Users\\AKSHAY\\Desktop\\vehicle_tracking\\contracts\\VehicleTracking.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/VehicleTracking.sol",
+    "exportedSymbols": {
+      "VehicleTracking": [
+        104
+      ]
+    },
+    "id": 105,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 104,
+        "linearizedBaseContracts": [
+          104
+        ],
+        "name": "VehicleTracking",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "VehicleTracking.VehicleData",
+            "id": 43,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "name": "frame",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "86:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "86:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "classType",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "109:16:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "109:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 40,
+                "name": "classId",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "135:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 39,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "135:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 42,
+                "name": "trackerId",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "160:17:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "160:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "VehicleData",
+            "nodeType": "StructDefinition",
+            "scope": 104,
+            "src": "57:127:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 46,
+            "name": "vehicleDataRecords",
+            "nodeType": "VariableDeclaration",
+            "scope": 104,
+            "src": "190:39:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_VehicleData_$43_storage_$dyn_storage",
+              "typeString": "struct VehicleTracking.VehicleData[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 44,
+                "name": "VehicleData",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 43,
+                "src": "190:11:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_VehicleData_$43_storage_ptr",
+                  "typeString": "struct VehicleTracking.VehicleData"
+                }
+              },
+              "id": 45,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "190:13:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_VehicleData_$43_storage_$dyn_storage_ptr",
+                "typeString": "struct VehicleTracking.VehicleData[]"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 72,
+              "nodeType": "Block",
+              "src": "347:240:1",
+              "statements": [
+                {
+                  "assignments": [
+                    58
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 58,
+                      "name": "newData",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 72,
+                      "src": "357:26:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                        "typeString": "struct VehicleTracking.VehicleData"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 57,
+                        "name": "VehicleData",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 43,
+                        "src": "357:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_VehicleData_$43_storage_ptr",
+                          "typeString": "struct VehicleTracking.VehicleData"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 65,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 60,
+                        "name": "_frame",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48,
+                        "src": "419:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 61,
+                        "name": "_classType",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 50,
+                        "src": "450:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 62,
+                        "name": "_classId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "483:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "_trackerId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 54,
+                        "src": "516:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 59,
+                      "name": "VehicleData",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "386:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_VehicleData_$43_storage_ptr_$",
+                        "typeString": "type(struct VehicleTracking.VehicleData storage pointer)"
+                      }
+                    },
+                    "id": 64,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [
+                      "frame",
+                      "classType",
+                      "classId",
+                      "trackerId"
+                    ],
+                    "nodeType": "FunctionCall",
+                    "src": "386:151:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_VehicleData_$43_memory",
+                      "typeString": "struct VehicleTracking.VehicleData memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "357:180:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 69,
+                        "name": "newData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 58,
+                        "src": "572:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                          "typeString": "struct VehicleTracking.VehicleData memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                          "typeString": "struct VehicleTracking.VehicleData memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "vehicleDataRecords",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 46,
+                        "src": "548:18:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_VehicleData_$43_storage_$dyn_storage",
+                          "typeString": "struct VehicleTracking.VehicleData storage ref[] storage ref"
+                        }
+                      },
+                      "id": 68,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "548:23:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_VehicleData_$43_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct VehicleTracking.VehicleData storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "548:32:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "548:32:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 73,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addVehicleData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48,
+                  "name": "_frame",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "260:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 47,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "260:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 50,
+                  "name": "_classType",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "276:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "276:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "_classId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "302:16:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "_trackerId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 73,
+                  "src": "320:18:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "320:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "259:80:1"
+            },
+            "returnParameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "347:0:1"
+            },
+            "scope": 104,
+            "src": "236:351:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 102,
+              "nodeType": "Block",
+              "src": "695:143:1",
+              "statements": [
+                {
+                  "assignments": [
+                    87
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 87,
+                      "name": "data",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 102,
+                      "src": "705:23:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                        "typeString": "struct VehicleTracking.VehicleData"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 86,
+                        "name": "VehicleData",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 43,
+                        "src": "705:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_VehicleData_$43_storage_ptr",
+                          "typeString": "struct VehicleTracking.VehicleData"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 91,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 88,
+                      "name": "vehicleDataRecords",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 46,
+                      "src": "731:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_array$_t_struct$_VehicleData_$43_storage_$dyn_storage",
+                        "typeString": "struct VehicleTracking.VehicleData storage ref[] storage ref"
+                      }
+                    },
+                    "id": 90,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 89,
+                      "name": "index",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 75,
+                      "src": "750:5:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "731:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_VehicleData_$43_storage",
+                      "typeString": "struct VehicleTracking.VehicleData storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "705:51:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 92,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "774:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                            "typeString": "struct VehicleTracking.VehicleData memory"
+                          }
+                        },
+                        "id": 93,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "frame",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 36,
+                        "src": "774:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 94,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "786:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                            "typeString": "struct VehicleTracking.VehicleData memory"
+                          }
+                        },
+                        "id": 95,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "classType",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 38,
+                        "src": "786:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 96,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "802:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                            "typeString": "struct VehicleTracking.VehicleData memory"
+                          }
+                        },
+                        "id": 97,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "classId",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 40,
+                        "src": "802:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 98,
+                          "name": "data",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 87,
+                          "src": "816:4:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                            "typeString": "struct VehicleTracking.VehicleData memory"
+                          }
+                        },
+                        "id": 99,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "trackerId",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 42,
+                        "src": "816:14:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 100,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "773:58:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_uint256_$_t_string_memory_$_t_uint256_$_t_uint256_$",
+                      "typeString": "tuple(uint256,string memory,uint256,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 85,
+                  "id": 101,
+                  "nodeType": "Return",
+                  "src": "766:65:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 103,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getVehicleData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 76,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 75,
+                  "name": "index",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "617:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 74,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "617:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "616:15:1"
+            },
+            "returnParameters": {
+              "id": 85,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 78,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "653:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 77,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "653:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "662:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "662:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "677:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "677:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 84,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 103,
+                  "src": "686:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 83,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "686:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "652:42:1"
+            },
+            "scope": 104,
+            "src": "593:245:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 105,
+        "src": "26:814:1"
+      }
+    ],
+    "src": "0:841:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/VehicleTracking.sol",
+      "exportedSymbols": {
+        "VehicleTracking": [
+          104
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.5",
+            ".16"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            104
+          ],
+          "name": "VehicleTracking",
+          "scope": 105
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "VehicleTracking.VehicleData",
+              "name": "VehicleData",
+              "scope": 104,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "frame",
+                  "scope": 43,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 35,
+                    "name": "ElementaryTypeName",
+                    "src": "86:7:1"
+                  }
+                ],
+                "id": 36,
+                "name": "VariableDeclaration",
+                "src": "86:13:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "classType",
+                  "scope": 43,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 37,
+                    "name": "ElementaryTypeName",
+                    "src": "109:6:1"
+                  }
+                ],
+                "id": 38,
+                "name": "VariableDeclaration",
+                "src": "109:16:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "classId",
+                  "scope": 43,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 39,
+                    "name": "ElementaryTypeName",
+                    "src": "135:7:1"
+                  }
+                ],
+                "id": 40,
+                "name": "VariableDeclaration",
+                "src": "135:15:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "trackerId",
+                  "scope": 43,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint256",
+                      "type": "uint256"
+                    },
+                    "id": 41,
+                    "name": "ElementaryTypeName",
+                    "src": "160:7:1"
+                  }
+                ],
+                "id": 42,
+                "name": "VariableDeclaration",
+                "src": "160:17:1"
+              }
+            ],
+            "id": 43,
+            "name": "StructDefinition",
+            "src": "57:127:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "vehicleDataRecords",
+              "scope": 104,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct VehicleTracking.VehicleData[]",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct VehicleTracking.VehicleData[]"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "VehicleData",
+                      "referencedDeclaration": 43,
+                      "type": "struct VehicleTracking.VehicleData"
+                    },
+                    "id": 44,
+                    "name": "UserDefinedTypeName",
+                    "src": "190:11:1"
+                  }
+                ],
+                "id": 45,
+                "name": "ArrayTypeName",
+                "src": "190:13:1"
+              }
+            ],
+            "id": 46,
+            "name": "VariableDeclaration",
+            "src": "190:39:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "addVehicleData",
+              "scope": 104,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_frame",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 47,
+                        "name": "ElementaryTypeName",
+                        "src": "260:7:1"
+                      }
+                    ],
+                    "id": 48,
+                    "name": "VariableDeclaration",
+                    "src": "260:14:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_classType",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 49,
+                        "name": "ElementaryTypeName",
+                        "src": "276:6:1"
+                      }
+                    ],
+                    "id": 50,
+                    "name": "VariableDeclaration",
+                    "src": "276:24:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_classId",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 51,
+                        "name": "ElementaryTypeName",
+                        "src": "302:7:1"
+                      }
+                    ],
+                    "id": 52,
+                    "name": "VariableDeclaration",
+                    "src": "302:16:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_trackerId",
+                      "scope": 73,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 53,
+                        "name": "ElementaryTypeName",
+                        "src": "320:7:1"
+                      }
+                    ],
+                    "id": 54,
+                    "name": "VariableDeclaration",
+                    "src": "320:18:1"
+                  }
+                ],
+                "id": 55,
+                "name": "ParameterList",
+                "src": "259:80:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 56,
+                "name": "ParameterList",
+                "src": "347:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        58
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newData",
+                          "scope": 72,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct VehicleTracking.VehicleData",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "VehicleData",
+                              "referencedDeclaration": 43,
+                              "type": "struct VehicleTracking.VehicleData"
+                            },
+                            "id": 57,
+                            "name": "UserDefinedTypeName",
+                            "src": "357:11:1"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "VariableDeclaration",
+                        "src": "357:26:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            "frame",
+                            "classType",
+                            "classId",
+                            "trackerId"
+                          ],
+                          "type": "struct VehicleTracking.VehicleData memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 43,
+                              "type": "type(struct VehicleTracking.VehicleData storage pointer)",
+                              "value": "VehicleData"
+                            },
+                            "id": 59,
+                            "name": "Identifier",
+                            "src": "386:11:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 48,
+                              "type": "uint256",
+                              "value": "_frame"
+                            },
+                            "id": 60,
+                            "name": "Identifier",
+                            "src": "419:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 50,
+                              "type": "string memory",
+                              "value": "_classType"
+                            },
+                            "id": 61,
+                            "name": "Identifier",
+                            "src": "450:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 52,
+                              "type": "uint256",
+                              "value": "_classId"
+                            },
+                            "id": 62,
+                            "name": "Identifier",
+                            "src": "483:8:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 54,
+                              "type": "uint256",
+                              "value": "_trackerId"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "516:10:1"
+                          }
+                        ],
+                        "id": 64,
+                        "name": "FunctionCall",
+                        "src": "386:151:1"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "VariableDeclarationStatement",
+                    "src": "357:180:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_VehicleData_$43_memory_ptr",
+                                  "typeString": "struct VehicleTracking.VehicleData memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct VehicleTracking.VehicleData storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 46,
+                                  "type": "struct VehicleTracking.VehicleData storage ref[] storage ref",
+                                  "value": "vehicleDataRecords"
+                                },
+                                "id": 66,
+                                "name": "Identifier",
+                                "src": "548:18:1"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "MemberAccess",
+                            "src": "548:23:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 58,
+                              "type": "struct VehicleTracking.VehicleData memory",
+                              "value": "newData"
+                            },
+                            "id": 69,
+                            "name": "Identifier",
+                            "src": "572:7:1"
+                          }
+                        ],
+                        "id": 70,
+                        "name": "FunctionCall",
+                        "src": "548:32:1"
+                      }
+                    ],
+                    "id": 71,
+                    "name": "ExpressionStatement",
+                    "src": "548:32:1"
+                  }
+                ],
+                "id": 72,
+                "name": "Block",
+                "src": "347:240:1"
+              }
+            ],
+            "id": 73,
+            "name": "FunctionDefinition",
+            "src": "236:351:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getVehicleData",
+              "scope": 104,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "index",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 74,
+                        "name": "ElementaryTypeName",
+                        "src": "617:7:1"
+                      }
+                    ],
+                    "id": 75,
+                    "name": "VariableDeclaration",
+                    "src": "617:13:1"
+                  }
+                ],
+                "id": 76,
+                "name": "ParameterList",
+                "src": "616:15:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 77,
+                        "name": "ElementaryTypeName",
+                        "src": "653:7:1"
+                      }
+                    ],
+                    "id": 78,
+                    "name": "VariableDeclaration",
+                    "src": "653:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 79,
+                        "name": "ElementaryTypeName",
+                        "src": "662:6:1"
+                      }
+                    ],
+                    "id": 80,
+                    "name": "VariableDeclaration",
+                    "src": "662:13:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 81,
+                        "name": "ElementaryTypeName",
+                        "src": "677:7:1"
+                      }
+                    ],
+                    "id": 82,
+                    "name": "VariableDeclaration",
+                    "src": "677:7:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 103,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 83,
+                        "name": "ElementaryTypeName",
+                        "src": "686:7:1"
+                      }
+                    ],
+                    "id": 84,
+                    "name": "VariableDeclaration",
+                    "src": "686:7:1"
+                  }
+                ],
+                "id": 85,
+                "name": "ParameterList",
+                "src": "652:42:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        87
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "data",
+                          "scope": 102,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct VehicleTracking.VehicleData",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "VehicleData",
+                              "referencedDeclaration": 43,
+                              "type": "struct VehicleTracking.VehicleData"
+                            },
+                            "id": 86,
+                            "name": "UserDefinedTypeName",
+                            "src": "705:11:1"
+                          }
+                        ],
+                        "id": 87,
+                        "name": "VariableDeclaration",
+                        "src": "705:23:1"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct VehicleTracking.VehicleData storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 46,
+                              "type": "struct VehicleTracking.VehicleData storage ref[] storage ref",
+                              "value": "vehicleDataRecords"
+                            },
+                            "id": 88,
+                            "name": "Identifier",
+                            "src": "731:18:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 75,
+                              "type": "uint256",
+                              "value": "index"
+                            },
+                            "id": 89,
+                            "name": "Identifier",
+                            "src": "750:5:1"
+                          }
+                        ],
+                        "id": 90,
+                        "name": "IndexAccess",
+                        "src": "731:25:1"
+                      }
+                    ],
+                    "id": 91,
+                    "name": "VariableDeclarationStatement",
+                    "src": "705:51:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 85
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(uint256,string memory,uint256,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "frame",
+                              "referencedDeclaration": 36,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 87,
+                                  "type": "struct VehicleTracking.VehicleData memory",
+                                  "value": "data"
+                                },
+                                "id": 92,
+                                "name": "Identifier",
+                                "src": "774:4:1"
+                              }
+                            ],
+                            "id": 93,
+                            "name": "MemberAccess",
+                            "src": "774:10:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "classType",
+                              "referencedDeclaration": 38,
+                              "type": "string memory"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 87,
+                                  "type": "struct VehicleTracking.VehicleData memory",
+                                  "value": "data"
+                                },
+                                "id": 94,
+                                "name": "Identifier",
+                                "src": "786:4:1"
+                              }
+                            ],
+                            "id": 95,
+                            "name": "MemberAccess",
+                            "src": "786:14:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "classId",
+                              "referencedDeclaration": 40,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 87,
+                                  "type": "struct VehicleTracking.VehicleData memory",
+                                  "value": "data"
+                                },
+                                "id": 96,
+                                "name": "Identifier",
+                                "src": "802:4:1"
+                              }
+                            ],
+                            "id": 97,
+                            "name": "MemberAccess",
+                            "src": "802:12:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "trackerId",
+                              "referencedDeclaration": 42,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 87,
+                                  "type": "struct VehicleTracking.VehicleData memory",
+                                  "value": "data"
+                                },
+                                "id": 98,
+                                "name": "Identifier",
+                                "src": "816:4:1"
+                              }
+                            ],
+                            "id": 99,
+                            "name": "MemberAccess",
+                            "src": "816:14:1"
+                          }
+                        ],
+                        "id": 100,
+                        "name": "TupleExpression",
+                        "src": "773:58:1"
+                      }
+                    ],
+                    "id": 101,
+                    "name": "Return",
+                    "src": "766:65:1"
+                  }
+                ],
+                "id": 102,
+                "name": "Block",
+                "src": "695:143:1"
+              }
+            ],
+            "id": 103,
+            "name": "FunctionDefinition",
+            "src": "593:245:1"
+          }
+        ],
+        "id": 104,
+        "name": "ContractDefinition",
+        "src": "26:814:1"
+      }
+    ],
+    "id": 105,
+    "name": "SourceUnit",
+    "src": "0:841:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x980e5CcA2a80A6c71D14A0214427686A94C7AB17",
+      "transactionHash": "0xd37cebbbc177c2b767c1de0d8393e10bdd97cc1f0200822a580f8647f5eea979"
+    }
+  },
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-06-17T10:07:58.184Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
